@@ -22,7 +22,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
-    <style>
+<style>
 * {
     margin: 0;
     padding: 0;
@@ -40,13 +40,13 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 20px;
     flex: 1;
 }
 
-.hero {
+.content {
     text-align: center;
     padding: 40px 20px;
 }
@@ -54,7 +54,7 @@ body {
 .logo-container {
     display: flex;
     justify-content: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .logo-link {
@@ -64,8 +64,8 @@ body {
 
 .rotating-text-wrapper {
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -89,7 +89,7 @@ body {
 
 .circular-text {
     fill: #1E1E1E;
-    font-size: 11px;
+    font-size: 9px;
     font-family: 'Dela Gothic One', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -101,26 +101,51 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #FF8800;
-    padding: 20px;
+    padding: 15px;
 }
 
 .logo-center svg {
     display: block;
-    width: 180px;
-    height: 180px;
+    width: 140px;
+    height: 140px;
 }
 
-.main-title {
-    font-size: clamp(2rem, 5vw, 4rem);
-    margin-bottom: 20px;
-    line-height: 1.2;
+.warning-title {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin-bottom: 30px;
+    line-height: 1.3;
+    text-transform: uppercase;
 }
 
-.subtitle {
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
+.warning-box {
+    background-color: #1E1E1E;
+    color: #FF8800;
+    padding: 40px 30px;
     margin-bottom: 40px;
-    opacity: 0.9;
+    text-align: left;
+}
+
+.warning-box h2 {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.warning-box p {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: clamp(0.95rem, 2vw, 1.15rem);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.warning-box p:last-child {
+    margin-bottom: 0;
+}
+
+.disclaimer {
+    font-size: clamp(1rem, 2.2vw, 1.3rem);
+    margin-bottom: 15px;
+    font-weight: bold;
 }
 
 .cta-button {
@@ -155,7 +180,7 @@ footer {
     color: #FF8800;
     text-align: center;
     padding: 30px 20px;
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 footer p {
@@ -171,29 +196,8 @@ footer p {
 
 @media (max-width: 768px) {
     .rotating-text-wrapper {
-        width: 320px;
-        height: 320px;
-    }
-    
-    .logo-center svg {
-        width: 140px;
-        height: 140px;
-    }
-    
-    .circular-text {
-        font-size: 9px;
-        letter-spacing: 1.5px;
-    }
-    
-    .hero {
-        padding: 30px 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .rotating-text-wrapper {
-        width: 280px;
-        height: 280px;
+        width: 250px;
+        height: 250px;
     }
     
     .logo-center svg {
@@ -203,34 +207,64 @@ footer p {
     
     .circular-text {
         font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+    
+    .content {
+        padding: 30px 15px;
+    }
+    
+    .warning-box {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .rotating-text-wrapper {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .logo-center svg {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .circular-text {
+        font-size: 7px;
         letter-spacing: 1px;
     }
     
     .cta-button {
         padding: 15px 28px;
     }
+    
+    .warning-box {
+        padding: 25px 15px;
+    }
 }
 
 @media (orientation: landscape) and (max-height: 600px) {
-    .hero {
+    .content {
         padding: 20px 15px;
     }
     
     .rotating-text-wrapper {
-        width: 300px;
-        height: 300px;
+        width: 200px;
+        height: 200px;
     }
     
     .logo-center svg {
-        width: 130px;
-        height: 130px;
+        width: 90px;
+        height: 90px;
     }
     
-    .main-title {
-        margin-bottom: 15px;
+    .warning-title {
+        margin-bottom: 20px;
     }
     
-    .subtitle {
+    .warning-box {
+        padding: 25px 20px;
         margin-bottom: 25px;
     }
 }
@@ -238,7 +272,7 @@ footer p {
 </head>
 <body>
     <main class="container">
-        <section class="hero">
+        <section class="content">
             <div class="logo-container">
                 <a href="https://t.me/+kBP-w7RZKO42ZDdh" target="_blank" rel="noopener noreferrer" class="logo-link" aria-label="Перейти в Telegram канал НАСР">
                     <div class="rotating-text-wrapper">
@@ -251,19 +285,33 @@ footer p {
                                     главные новости и мемы большой Сеновалии • главные новости и мемы большой Сеновалии •
                                 </textPath>
                             </text>
-                        <svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M152 200H243.235V284.168H295.919V200H387.154V388.235H295.919V302.185H243.235V388.235H152V200Z" fill="#1E1E1E"/>
-<path d="M483.532 200H562.822L647 388.235H544.358L515.846 325.849H456.107L431.668 388.235H411.846L483.532 200ZM508.243 309.445L483.532 254.857L462.081 309.445H508.243Z" fill="#1E1E1E"/>
-<path d="M312.631 581.468C328.288 581.468 340.708 576.084 349.893 565.318C359.078 554.552 365.027 541.491 367.741 526.136H387.154C384.232 545.197 376.821 561.435 364.923 574.849C358.243 582.262 350.624 587.822 342.065 591.528C333.715 595.058 324.426 597.353 314.197 598.412C304.177 599.47 291.026 600 274.744 600C251.781 600 233.098 598.147 218.695 594.44C204.5 590.557 192.288 584.292 182.06 575.643C162.02 558.699 152 535.402 152 505.75C152 474.51 160.976 451.3 178.928 436.121C190.618 426.238 203.665 419.707 218.069 416.53C232.472 413.353 251.364 411.765 274.744 411.765C296.245 411.765 313.675 413.088 327.035 415.736C340.604 418.207 351.667 423.59 360.226 431.885C367.323 438.769 372.855 447.064 376.821 456.772C380.788 466.479 383.084 476.098 383.71 485.629H365.862C365.027 477.687 362.731 469.568 358.973 461.272C355.425 452.801 349.789 445.564 342.065 439.563C334.341 433.386 324.53 430.297 312.631 430.297C301.359 430.297 292.278 434.445 285.39 442.74C279.336 449.271 274.744 458.89 271.612 471.598C269.316 481.305 268.168 492.689 268.168 505.75C268.168 526.4 271.091 543.079 276.936 555.787C284.45 572.908 296.349 581.468 312.631 581.468Z" fill="#1E1E1E"/>
-<path d="M411.846 411.765H591.536C608.138 411.765 621.532 416.336 631.719 425.479C641.906 434.443 647 446.633 647 462.05C647 471.193 644.642 479.709 639.926 487.597C635.209 495.485 628.701 501.759 620.4 506.42C612.099 511.081 602.667 513.412 592.102 513.412L505.794 513.681V600H411.846V411.765ZM515.698 498.084C522.49 498.084 528.715 496.56 534.375 493.513C540.223 490.286 544.751 485.983 547.958 480.605C551.354 475.048 553.051 469.132 553.051 462.857C553.051 456.403 551.354 450.487 547.958 445.109C544.751 439.552 540.223 435.16 534.375 431.933C528.715 428.706 522.49 427.092 515.698 427.092H505.794V498.084H515.698Z" fill="#1E1E1E"/>
-</svg>
+                        </svg>
+                        <div class="logo-center">
+                            <svg width="140" height="140" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Логотип НАСР">
+                                <path d="M800 0H0V400V800H800V400V0Z" fill="#FF8800"/>
+                                <path d="M152 200H243.235V284.168H295.919V200H387.154V388.235H295.919V302.185H243.235V388.235H152V200Z" fill="#1E1E1E"/>
+                                <path d="M483.532 200H562.822L647 388.235H544.358L515.846 325.849H456.107L431.668 388.235H411.846L483.532 200ZM508.243 309.445L483.532 254.857L462.081 309.445H508.243Z" fill="#1E1E1E"/>
+                                <path d="M312.631 581.468C328.288 581.468 340.708 576.084 349.893 565.318C359.078 554.552 365.027 541.491 367.741 526.136H387.154C384.232 545.197 376.821 561.435 364.923 574.849C358.243 582.262 350.624 587.822 342.065 591.528C333.715 595.058 324.426 597.353 314.197 598.412C304.177 599.47 291.026 600 274.744 600C251.781 600 233.098 598.147 218.695 594.44C204.5 590.557 192.288 584.292 182.06 575.643C162.02 558.699 152 535.402 152 505.75C152 474.51 160.976 451.3 178.928 436.121C190.618 426.238 203.665 419.707 218.069 416.53C232.472 413.353 251.364 411.765 274.744 411.765C296.245 411.765 313.675 413.088 327.035 415.736C340.604 418.207 351.667 423.59 360.226 431.885C367.323 438.769 372.855 447.064 376.821 456.772C380.788 466.479 383.084 476.098 383.71 485.629H365.862C365.027 477.687 362.731 469.568 358.973 461.272C355.425 452.801 349.789 445.564 342.065 439.563C334.341 433.386 324.53 430.297 312.631 430.297C301.359 430.297 292.278 434.445 285.39 442.74C279.336 449.271 274.744 458.89 271.612 471.598C269.316 481.305 268.168 492.689 268.168 505.75C268.168 526.4 271.091 543.079 276.936 555.787C284.45 572.908 296.349 581.468 312.631 581.468Z" fill="#1E1E1E"/>
+                                <path d="M411.846 411.765H591.536C608.138 411.765 621.532 416.336 631.719 425.479C641.906 434.443 647 446.633 647 462.05C647 471.193 644.642 479.709 639.926 487.597C635.209 495.485 628.701 501.759 620.4 506.42C612.099 511.081 602.667 513.412 592.102 513.412L505.794 513.681V600H411.846V411.765ZM515.698 498.084C522.49 498.084 528.715 496.56 534.375 493.513C540.223 490.286 544.751 485.983 547.958 480.605C551.354 475.048 553.051 469.132 553.051 462.857C553.051 456.403 551.354 450.487 547.958 445.109C544.751 439.552 540.223 435.16 534.375 431.933C528.715 428.706 522.49 427.092 515.698 427.092H505.794V498.084H515.698Z" fill="#1E1E1E"/>
+                            </svg>
                         </div>
                     </div>
                 </a>
             </div>
             
-            <h1 class="main-title">НАСР / Новости Сеновалии</h1>
-            <p class="subtitle">Главные новости и мемы большой Сеновалии</p>
+            <h1 class="warning-title">Предупреждение для читателей telegram канала "НАСР"</h1>
+            
+            <div class="warning-box">
+                <p class="disclaimer">Все тексты и видеоматериалы в telegram канале "НАСР/НОВОСТИ СЕНОВАЛИИ" представляют собой гротескные пародии на реальность и не являются реальными новостями. Это творческий и сатирический проект.</p>
+                
+                <p>Вся информация, содержащаяся в "НАСР / НОВОСТИ СЕНОВАЛИИ" (Не считая рекламы), не имеет отношения к реальному миру и создана исключительно в развлекательных целях.</p>
+                
+                <h2>Вымышленный характер информации</h2>
+                
+                <p>Все имена, названия, персонажи, места, события, организации и происшествия, описанные в публикациях в канале, являются продуктом воображения авторов или используются в вымышленном контексте. Любое сходство с реальными людьми (живыми или умершими), существующими странами, реальными событиями или организациями является абсолютно случайным.</p>
+                
+                <p>Администрация и участники проекта не несут ответственности за любые последствия, возникшие в результате использования материалов, опубликованных в канале.</p>
+            </div>
             
             <a href="https://t.me/+kBP-w7RZKO42ZDdh" target="_blank" rel="noopener noreferrer" class="cta-button">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -275,7 +323,7 @@ footer p {
     </main>
     
     <footer>
-        <p>НАСР - сатирические новости виртуального государства Сеновалия</p>
+        <p>НАСР — сатирические новости виртуального государства Сеновалия</p>
         <p class="copyright">&copy; 2025 НАСР / Новости Сеновалии</p>
     </footer>
 </body>
